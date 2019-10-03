@@ -1,2 +1,2 @@
 # Role-Manager
-https://travis-ci.com/Olamide6774/Role-Manager.svg?branch=develop
+[![Build Status](https://travis-ci.com/Olamide6774/Role-Manager.svg?branch=develop)](https://travis-ci.com/Olamide6774/Role-Manager)
