@@ -1,0 +1,26 @@
+language : node_js
+
+node_js: 12.4.0
+
+cache:
+  directories:
+    -node_modules
+
+install:
+  -npm ci
+
+script:
+  -npm test
+
+after_script:
+  - npm run coverage
+
+notifications:
+  email: false    
+
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: develop  
+  
