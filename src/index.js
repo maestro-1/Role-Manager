@@ -34,7 +34,7 @@ app.get((error, req, res) => {
   res.status(error.status || 500);
   res.json({
     error:{
-      message : error.message
+      message : "an error occured while loading this page"
     }
   })
 });
