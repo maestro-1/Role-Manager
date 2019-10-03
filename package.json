@@ -48,7 +48,6 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "babel server.js --out-dir build",
         "dev-start": "babel-watch server.js"
-
     },
     "repository": {
         "type": "git",
@@ -65,6 +64,7 @@
         "@babel/preset-env": "^7.6.2",
         "express": "^4.17.1",
         "moment": "^2.24.0",
+        "swagger-ui-express": "^4.1.1",
         "uuid": "^3.3.3"
     },
     "devDependencies": {
@@ -73,4 +73,7 @@
         "babel-watch": "^7.0.0"
     }
 }
+<<<<<<< HEAD
+>>>>>>> initial commit
+=======
 >>>>>>> initial commit
