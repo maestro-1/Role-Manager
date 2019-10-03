@@ -24,11 +24,19 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('*', (req, res) => {
-  res.status(404).json({
-    status: 'error',
-    error: 'Resource does not exist',
-  });
+app.get((req, res, next)=>{
+  const error = new Error("resource not found");
+  error.status = 404;
+  next()
+})
+
+app.get((error, req, res) => {
+  res.status(error.status || 500);
+  res.json({
+    error:{
+      message : error.message
+    }
+  })
 });
 
 app.listen(PORT, () => DEBUG(`Server running on port ${PORT}`));
