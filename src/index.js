@@ -3,9 +3,7 @@ import express from 'express';
 import logger from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDoc from '../docs/role-manager-api.json';
-
 import mongoose from 'mongoose';
-import bodyParser from 'body-parser';
 
 
 const userRoutes = require('./routes/userRoutes');
@@ -33,9 +31,6 @@ mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
 
 app.use('/',userRoutes);
 
@@ -69,3 +64,4 @@ app.get((error, req, res) => {
 app.listen(PORT, () => DEBUG(`Server running on port ${PORT}`));
 
 export default app;
+
