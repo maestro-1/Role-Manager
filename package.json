@@ -1,4 +1,6 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
   "name": "role-manager",
   "version": "1.0.0",
   "description": "",
@@ -34,3 +36,50 @@
     "morgan": "^1.9.1"
   }
 }
+=======
+    "name": "Role-manager",
+=======
+    "name": "role-manager",
+>>>>>>> initial commit
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:dev": "set DEBUG=dev && nodemon --exec babel-node ./src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/devcareer/Role-Manager.git"
+    },
+    "author": "devcareers",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/devcareer/Role-Manager/issues"
+    },
+    "homepage": "https://github.com/devcareer/Role-Manager#readme",
+    "devDependencies": {
+        "eslint": "^6.5.1",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "nodemon": "^1.19.3"
+    },
+    "dependencies": {
+        "@babel/cli": "^7.6.2",
+        "@babel/core": "^7.6.2",
+        "@babel/node": "^7.6.2",
+        "@babel/preset-env": "^7.6.2",
+        "debug": "^4.1.1",
+        "dotenv": "^8.1.0",
+        "express": "^4.17.1",
+        "morgan": "^1.9.1"
+    }
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+>>>>>>> initial commit
+=======
+>>>>>>> initial commit
+=======
+}
+>>>>>>> second commit
