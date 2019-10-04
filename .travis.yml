@@ -1,16 +1,12 @@
 language : node_js
-
-node_js: 12.4.0
-
-cache:
-  directories:
-    -node_modules
+node_js:
+  - stable
 
 install:
-  -npm ci
+  - npm install
 
 script:
-  -npm test
+  - npm test
 
 after_success:
 - npm run coverage
@@ -26,4 +22,3 @@ deploy:
   github-token: $GITHUB_TOKEN
   on:
     branch: develop
-
