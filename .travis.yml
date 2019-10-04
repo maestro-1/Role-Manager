@@ -12,15 +12,18 @@ install:
 script:
   -npm test
 
+after_success:
+- npm run coverage
+
 after_script:
-  - npm run coverage
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
-  email: false    
+  email: false
 
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
   on:
-    branch: develop  
-  
+    branch: develop
+
